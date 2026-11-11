@@ -39,9 +39,7 @@
         <div class="reveal">
             <div class="slides">
                 <section>
-                    <h1>
-                        Использование языка разметки как структуры для данных
-                    </h1>
+                    <h1>Манипулирование DOM-элементов</h1>
                     <h4>Кутиков Павел Алекссевич</h4>
                 </section>
                 <section>
@@ -128,34 +126,57 @@
                         </code></pre>
                     </section>
                     <section>
-                        <h1>Семантика</h1>
-                        <div>
-                            <em>Семантика = Смысл</em>
-                        </div>
-                        <br />
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="border-g">
-                                <h3>Хорошо</h3>
-                                <h4>Смысловой тег</h4>
-                                <code>&lt;header&gt;</code>
-                                ,
-                                <code>&lt;nav&gt;</code>
-                                ,
-                                <code>&lt;main&gt;</code>
-                                ,
-                                <code>&lt;footer&gt;</code>
-                            </div>
-                            <div class="border-r">
-                                <h3>Плохо</h3>
-                                <h4>Общий тег</h4>
-                                <code>&lt;div&gt;</code>
-                                ,
-                                <code>&lt;span&gt;</code>
-                            </div>
-                        </div>
+                        <h1>HTML атрибуты</h1>
+                        <pre><code data-line-numbers="2" data-trim class="html">
+&lt;img class="secret" id="secret" src="https://mydomain.com/image.png" /&gt;
+                        </code></pre>
+                        <p>
+                            Позволяет настраивать и выделять атрибуты для
+                            дальнейшей работы с ними
+                        </p>
                     </section>
                 </section>
-                <section><h1>А теперь к коду!</h1></section>
+                <section>
+                    <h1>CSS</h1>
+                    <pre><code data-trim data-line-numbers class="css">
+.card {
+  background: var(--card);
+  border-radius: 16px;
+}
+                        </code></pre>
+                    <ul>
+                        <li>
+                            Правило: кого красим
+                            <code>{ что меняем }</code>
+                        </li>
+                        <li>
+                            <code>.card</code>
+                            — все элементы с классом card
+                        </li>
+                        <li>
+                            Переменная
+                            <code>--accent</code>
+                            задаётся один раз и работает везде
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <section>
+                        <h1>JavaScript</h1>
+                        <h2>Ищем элемент</h2>
+                        <pre><code data-trim class="js">
+                            const secret = document.querySelector('#secret')
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h1>JavaScript</h1>
+                        <h2>Видоизменияем элемент</h2>
+                        <pre><code data-trim class="js">
+const secret = document.querySelector('#secret')
+box.classList.add('hidden');
+                        </code></pre>
+                    </section>
+                </section>
             </div>
         </div>
         <script>
